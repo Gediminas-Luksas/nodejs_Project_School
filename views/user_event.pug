@@ -1,0 +1,57 @@
+
+extends layout
+
+block content
+
+    header.masthead
+            .container
+                .row
+                    .col-lg-8.col-md-10.mx-auto
+                        
+            .overlay
+            .container
+                .row
+                    .col-lg-8.col-md-10.mx-auto
+                        .container
+                            .row
+                            .col-sm-12.height
+                                .panel
+                                .name
+                                    small Gediminas Luksas
+                                img.pic.rounded-circle(src='/img/adorable-animal-breed-1851471.jpg', alt='...')
+                                ul.nav.justify-content-end
+                                    li.nav-item
+                                        a.nav-link.text-info(href='/users/user') Inbox
+                                    li.nav-item
+                                        a.nav-link.text-info(href='#') Sent
+                                    li.nav-item
+                                        a.nav-link.text-info(href='/users/user_event') Event
+                                .col-sm-12
+                                    br
+                                    br
+                                    .container
+                                        .row
+                                        .col-sm-12.height
+                                            .page-section.clearfix
+                                                .container
+                                                    .intro
+                                                    .intro-text.left-0.bg-faded.p-5.rounded
+                                                        
+                                                        //- if user
+                                                        h3.ei_Title
+                                                            //- = user.name
+                                                        .calendar_plan
+                                                        
+                                                        .calendar_events
+                                                        p.ce_title Upcoming Events
+                                                        .event_item
+                                                                
+                                                        //- each event in events
+                                                        //-     if event.checked == false
+                                                                a(href='/events/edit/' + event._id).ei_Title #{event.hour}
+                                                                .ei_Copy= event.title
+                                                                .ei_Copy
+                                                            else
+                                                                lable(href='/events/edit/' + event._id).ei_Title #{event.hour}
+                                                                .ei_Copy= event.author
+                                                                                    

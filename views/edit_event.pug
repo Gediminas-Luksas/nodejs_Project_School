@@ -1,0 +1,15 @@
+extends layout
+
+block content
+        h2 #{title}
+        hr
+        form(method='POST', action='/events/edit/' + event._id)
+            #form-grup
+                label= event.hour
+            #form-grup
+                input.border-0(name='author', type='text',readonly='true', value= user.name)
+                p Information correct? 
+                    input(type="checkbox", name="checkbox") 
+                hr
+                input.btn.btn-primary(type="submit", value='Save')
+

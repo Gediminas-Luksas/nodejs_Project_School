@@ -1,0 +1,31 @@
+extends layout
+block content
+
+   
+    .intro
+    .intro-text.left-0.bg-faded.p-5.rounded
+        h2.section-heading.mb-4
+        span.section-heading-lower          
+        p.mb-3    
+        h1.header_title Welcome 
+        if user
+            h3.ei_Title= user.name
+        .calendar_plan
+        .cl_plan
+            .cl_title Today
+            .cl_copy 22nd  April  2018
+            .cl_add
+            a.fas.fa-plus(href="#")
+        .calendar_events
+        p.ce_title Upcoming Events
+        .event_item
+                
+        each event in events
+            if event.checked == false
+                a(href='/events/edit/' + event._id).ei_Title #{event.hour}
+                .ei_Copy= event.title
+                .ei_Copy
+            else
+                lable(href='/events/edit/' + event._id).ei_Title #{event.hour}
+                .ei_Copy= event.author
+                                    

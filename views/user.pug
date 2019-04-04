@@ -1,0 +1,43 @@
+extends layout
+
+block content
+    
+   
+    .container
+        .row
+            .col-lg-8.col-md-10.mx-auto
+                .container
+                    .row
+                    .col-sm-12.height
+                        .panel
+                        .name
+                            small Gediminas Luksas
+                        img.pic.rounded-circle(src='/img/adorable-animal-breed-1851471.jpg', alt='...')
+                        ul.nav.justify-content-end
+                            li.nav-item
+                                a.nav-link.text-info(href='#') Inbox
+                            li.nav-item
+                                a.nav-link.text-info(href='#') Sent
+                            li.nav-item
+                                a.nav-link.text-info(href='/users/user_event') Event
+                        .col-sm-12
+                            br
+                            br
+                            button.btn.text-muted(type='button', data-toggle='collapse', data-target='#demo3') Simple collapsible
+                            #demo3.collapse.text-muted
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            hr
+                            button.btn.text-muted(type='button', data-toggle='collapse', data-target='#demo2') Inbox mesage 2
+                            #demo2.collapse.text-muted
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            hr
+                            button.btn.text-muted(type='button', data-toggle='collapse', data-target='#demo1') Inbox mesage 3
+                            #demo1.collapse.text-muted
+                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            hr

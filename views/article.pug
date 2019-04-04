@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    p= article.body
+    p.post-meta Posted by 
+        = article.date.toDateString()
+    if user
+        if user.id == article.author
+            a.btn.btn-info(href='/articles/edit/' + article._id) Edit
+            a.btn.btn-danger.delete-article(href='#', data-id= article._id) Delete
+    

@@ -1,0 +1,33 @@
+extends layout
+
+block content
+
+        
+    .container
+            .row
+                .col-lg-8.col-md-10.mx-auto
+                    .page-section.clearfix
+                        .container 
+                            form.modal-content.animate(method='POST', action='/users/register')
+                                .imgcontainer
+                                    span(onclick="parentNode.remove()", title='Close Modal')
+                                        a.close(href='/') ×
+                                .form-grup
+                                    label.inputText User Name :
+                                    input.form-control(name='name' type='text' placeholder='Name')
+                                .form-grup
+                                    label.inputText Email :
+                                    input.form-control(name='email' type='text' placeholder='Email')
+                                .form-grup
+                                    label.inputText User Name :
+                                    input.form-control(name='username', type='text' placeholder='Username')
+                                .form-grup
+                                    label.inputText Password :
+                                    input.form-control(name='password', type='password' placeholder='Password')
+                                .form-grup
+                                    label.inputText Confirm :
+                                    input.form-control(name='password2', type='password' placeholder='Password')
+                                    br
+                                
+                                button.btn.btn-outline-success.btn-block(type='submit') Register
+

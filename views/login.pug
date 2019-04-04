@@ -1,0 +1,34 @@
+extends layout
+
+block content 
+     
+    .container
+        .row
+            .col-lg-8.col-md-10.mx-auto
+                .page-section.clearfix
+                    .container      
+                        form.modal-content.animate(method='POST', action='/users/login')
+                            .imgcontainer
+                            span(onclick="parentNode.remove()", title='Close Modal')
+                                a.close(href='/') ×
+                            .form-group
+                                label.inputText User Name :
+                                .input-group.mb-2
+                                    .input-group-prepend
+                                    .input-group-text
+                                        i.fa.fa-user.text-success
+                                    input.form-control(type='text', name='username', placeholder='Enter User name', required='')
+                            
+                            .form-group
+                                label.inputText Password :
+                                .input-group.mb-2
+                                    .input-group-prepend
+                                    .input-group-text
+                                        i.fa.fa-envelope.text-success
+                                    input#exampleInputPassword1.form-control(name='password', type='password', placeholder='Enter Password')
+                            button.btn.btn-outline-success.btn-block(type='submit') Login
+
+
+    
+            
+    

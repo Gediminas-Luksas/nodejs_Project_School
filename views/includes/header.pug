@@ -1,0 +1,41 @@
+nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top
+            .container
+                a.navbar-brand(href='/') Nodejs Applisation  Lashes
+                button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                    | Menu
+                    i.fas.fa-bars
+                #navbarResponsive.collapse.navbar-collapse
+                    ul.navbar-nav.ml-auto
+                        a(href='#')
+                            span.fa-stack.fa-sm
+                                i.fas.fa-stack-2x
+                                i.fab.fa-facebook-f.fa-stack-1x.fa-inverse
+                        a(href='#')
+                            span.fa-stack.fa-sm
+                                i.fas.fa-stack-2x
+                                i.fab.fa-instagram.fa-stack-1x.fa-inverse.border-right
+
+                        li.nav-item
+                            a.nav-link.filter-text(href='/') Home
+                        li.nav-item
+                            a.nav-link.filter-text(href='/users/about') About
+                        li.nav-item
+                            a.nav-link.filter-text(href='/users/event', id="event" ) Event
+                        li.nav-item
+                            a.nav-link.filter-text.border-right(href='/users/contact') Contact
+
+                        if user
+                            li.nav-item
+                                a.nav-link.filter-text.text-capitalize(href='/articles/add',  id="addArt") Add Article
+                            li.nav-item
+                                a.nav-link.filter-text.text-capitalize(href='/events/add', id="addEvent") Add Event
+                            li.nav-item
+                                a.nav-link.filter-text.text-capitalize(href= '/users/logout') Loguot
+                            li.nav-item
+                                a.nav-link.filter-text.text-capitalize(href='/users/user')= user.name
+                        else
+                            li.nav-item
+                                a.nav-link.filter-text.text-capitalize(href='/users/login') Login
+                            li.nav-item
+                                a.nav-link.filter-text.text-capitalize(href='/users/register') Register
+                        

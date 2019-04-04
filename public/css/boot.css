@@ -1,0 +1,28 @@
+
+.height{
+    height: 150px;
+    border: 1px solid rgba(145, 145, 145, 0.678);
+    background-color: rgba(189, 189, 189, 0.418);
+}
+
+
+.pic
+{
+    width: 120px;
+     margin-top:86px;
+     margin-left:15px;
+     margin-bottom:-45px;
+}
+
+.panel
+{ 
+    border-bottom-color: rgb(122, 121, 120);
+}
+
+.name
+{
+    position:absolute;
+    margin-top:95px;
+    padding-left:150px;
+    font-size:30px;
+}
